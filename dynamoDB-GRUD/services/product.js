@@ -1,10 +1,10 @@
 const { v4: uuidv4 } = require('uuid');
 const AWS = require('aws-sdk');
-
+require('dotenv').config()
 AWS.config.update({
     region: "us-east-1",
-    accessKeyId: "AKIAQJJMARCKEBGKFMEU",
-    secretAccessKey: "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",
+    accessKeyId:process.env.ACCESSKEYID,
+    secretAccessKey: process.env.SECRETACCESSKEY,
     endpoint: "https://dynamodb.us-east-1.amazonaws.com"
 });
 

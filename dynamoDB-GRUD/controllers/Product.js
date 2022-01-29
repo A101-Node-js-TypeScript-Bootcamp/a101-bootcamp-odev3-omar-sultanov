@@ -17,7 +17,7 @@ exports.addData= async (req,res)=>{
     res.send(response)
  }
 
-//readData function for reading Data from DataBase
+//readData function for reading all data from DataBase
 exports.readData =async (req, res) =>{
     const response = await productServices.readAllProductItem();
     res.send(response)
@@ -29,7 +29,7 @@ exports.readIdItem =async (req, res) =>{
     res.send(response)
 }
 
-//readData function for reading Data from DataBase
+//readDiscountItem function for reading data only exists isDiscount 
 exports.readDiscountItem = async (req, res) =>{
     const response = await productServices.readDiscountFilterItem();
     res.send(response)
